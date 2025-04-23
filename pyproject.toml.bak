@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stringfun"
+version = "0.1.0"
+description = "A Python package for string manipulation and analysis"
+readme = "README.md"
+authors = [{name = "Nilkanth Ahire", email = "nilkanth8747@gmail.com"}]
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: General",
+    "Topic :: Education :: Computer Aided Instruction (CAI)",
+]
+keywords = ["string", "text", "manipulation", "utility", "education", "learning", "beginner", "student"]
+requires-python = ">=3.6"
+
+[tool.setuptools.dynamic]
+optional-dependencies = {attr = "options.extras_require"}
+
+[project.urls]
+"Homepage" = "https://github.com/nilkanth02/stringfun"
+"Bug Tracker" = "https://github.com/nilkanth02/stringfun/issues"
+"Documentation" = "https://github.com/nilkanth02/stringfun"
+"Source Code" = "https://github.com/nilkanth02/stringfun"
+
+[project.scripts]
+stringfun = "stringfun.__main__:main"

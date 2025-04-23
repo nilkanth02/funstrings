@@ -1,0 +1,44 @@
+# MANIFEST.in file for the stringfun package
+#
+# This file specifies which non-Python files should be included in your package distribution.
+# When you set include_package_data=True in setup.py, setuptools uses this file to determine
+# which files to include.
+#
+# For beginners and students:
+# - This file uses glob patterns to specify files to include or exclude
+# - Common patterns include:
+#   - include: Include specific files
+#   - exclude: Exclude specific files
+#   - recursive-include: Include all files in a directory matching a pattern
+#   - recursive-exclude: Exclude all files in a directory matching a pattern
+#   - global-include: Include all files matching a pattern anywhere in the source tree
+#   - global-exclude: Exclude all files matching a pattern anywhere in the source tree
+#
+# Learn more: https://packaging.python.org/guides/using-manifest-in/
+
+# Include the license file
+include LICENSE
+
+# Include the README file
+include README.md
+
+# Include documentation
+recursive-include docs *.md
+
+# Include examples
+recursive-include examples *.py
+
+# Include tutorials
+recursive-include tutorials *.py
+
+# Include tests
+recursive-include tests *.py
+
+# Exclude development and build files
+global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store
+exclude .gitignore .coverage .coveragerc
+recursive-exclude .git *
+recursive-exclude .github *
+recursive-exclude dist *
+recursive-exclude build *
+recursive-exclude *.egg-info *

@@ -1,0 +1,33 @@
+from .operations import (
+    # Basic String Operations
+    reverse_string,
+    count_vowels,
+    count_consonants,
+    is_palindrome,
+    to_upper,
+    to_lower,
+    word_count,
+    sort_characters,
+    remove_whitespace,
+
+    # Text Analysis Functions
+    get_word_frequencies,
+    longest_word,
+    shortest_word,
+    average_word_length,
+    is_pangram,
+
+    # String Transformation Functions
+    snake_to_camel,
+    camel_to_snake,
+    rotate_string,
+    shuffle_string,
+    reverse_words,
+
+    # Pattern-based Functions
+    extract_numbers,
+    extract_emails,
+    extract_urls,
+    mask_sensitive,
+    find_repeated_words,
+)
