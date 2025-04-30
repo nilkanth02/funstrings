@@ -1,6 +1,29 @@
 # FunStrings
 
+[![PyPI Version](https://img.shields.io/pypi/v/funstrings.svg)](https://pypi.org/project/funstrings/)
+[![PyPI Downloads](https://static.pepy.tech/badge/funstrings/month)](https://pepy.tech/project/funstrings)
+[![Python Versions](https://img.shields.io/pypi/pyversions/funstrings.svg)](https://pypi.org/project/funstrings/)
+[![License](https://img.shields.io/pypi/l/funstrings.svg)](https://github.com/nilkanth02/funstrings/blob/main/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/nilkanth02/funstrings.svg)](https://github.com/nilkanth02/funstrings/stargazers)
+[![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Total Downloads](https://static.pepy.tech/badge/funstrings)](https://pepy.tech/project/funstrings)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/nilkanth02/funstrings/graphs/commit-activity)
+
 FunStrings is a comprehensive Python package that provides a wide range of functions for string manipulation, analysis, and transformation. It's designed to make working with strings easier and more efficient for developers, students, and educators.
+
+## Table of Contents
+
+- [Features](#features)
+  - [Basic String Operations](#basic-string-operations)
+  - [Text Analysis Functions](#text-analysis-functions)
+  - [String Transformation Functions](#string-transformation-functions)
+  - [Pattern-based Functions](#pattern-based-functions)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Documentation](#documentation)
+- [For Students and Educators](#for-students-and-educators)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
@@ -87,3 +110,19 @@ FunStrings is designed to be educational and beginner-friendly. It includes:
 - Comprehensive tutorials in the `tutorials/` directory
 - Example scripts in the `examples/` directory
 - Type hints for better IDE integration
+
+## Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
+
+Please make sure to update tests as appropriate.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
