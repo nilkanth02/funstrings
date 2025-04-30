@@ -2,12 +2,12 @@
 
 [![PyPI Version](https://img.shields.io/pypi/v/funstrings.svg)](https://pypi.org/project/funstrings/)
 [![PyPI Downloads](https://static.pepy.tech/badge/funstrings/month)](https://pepy.tech/project/funstrings)
-[![Python Versions](https://img.shields.io/pypi/pyversions/funstrings.svg)](https://pypi.org/project/funstrings/)
+<!-- [![Python Versions](https://img.shields.io/pypi/pyversions/funstrings.svg)](https://pypi.org/project/funstrings/) -->
 [![License](https://img.shields.io/pypi/l/funstrings.svg)](https://github.com/nilkanth02/funstrings/blob/main/LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/nilkanth02/funstrings.svg)](https://github.com/nilkanth02/funstrings/stargazers)
-[![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Total Downloads](https://static.pepy.tech/badge/funstrings)](https://pepy.tech/project/funstrings)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/nilkanth02/funstrings/graphs/commit-activity)
+<!-- [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) -->
+<!-- [![Total Downloads](https://static.pepy.tech/badge/funstrings)](https://pepy.tech/project/funstrings) -->
+<!-- [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/nilkanth02/funstrings/graphs/commit-activity) -->
 
 FunStrings is a comprehensive Python package that provides a wide range of functions for string manipulation, analysis, and transformation. It's designed to make working with strings easier and more efficient for developers, students, and educators.
 
