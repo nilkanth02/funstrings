@@ -8,6 +8,10 @@ This document provides detailed information about all the functions available in
 - [Text Analysis Functions](#text-analysis-functions)
 - [String Transformation Functions](#string-transformation-functions)
 - [Pattern-based Functions](#pattern-based-functions)
+- [Data Cleaning Functions](#data-cleaning-functions)
+- [Text Analysis Helpers](#text-analysis-helpers)
+- [ML/NLP Preprocessing](#mlnlp-preprocessing)
+- [Validation Functions](#validation-functions)
 - [For Students and Beginners](#for-students-and-beginners)
 
 ## Basic String Operations
@@ -589,6 +593,430 @@ from stringfun import find_repeated_words
 text = "hello world hello python world code"
 repeated = find_repeated_words(text)
 print(repeated)  # Output: ['hello', 'world']
+```
+
+## Data Cleaning Functions
+
+### remove_html_tags
+
+```python
+def remove_html_tags(s: str) -> str:
+    """Strip all HTML tags from the input string."""
+```
+
+**Parameters:**
+- `s` (str): The input string containing HTML tags
+
+**Returns:**
+- str: String with all HTML tags removed
+
+**Example:**
+```python
+from funstrings import remove_html_tags
+
+text = "<p>Hello <b>World</b></p>"
+cleaned = remove_html_tags(text)
+print(cleaned)  # Output: "Hello World"
+```
+
+### remove_emojis
+
+```python
+def remove_emojis(s: str) -> str:
+    """Remove emojis from the input string."""
+```
+
+**Parameters:**
+- `s` (str): The input string potentially containing emojis
+
+**Returns:**
+- str: String with all emojis removed
+
+**Example:**
+```python
+from funstrings import remove_emojis
+
+text = "Hello 😊 World 🌍"
+cleaned = remove_emojis(text)
+print(cleaned)  # Output: "Hello  World "
+```
+
+### remove_special_characters
+
+```python
+def remove_special_characters(s: str) -> str:
+    """Keep only letters and numbers, removing all special characters."""
+```
+
+**Parameters:**
+- `s` (str): The input string
+
+**Returns:**
+- str: String with only alphanumeric characters
+
+**Example:**
+```python
+from funstrings import remove_special_characters
+
+text = "Hello, World! 123"
+cleaned = remove_special_characters(text)
+print(cleaned)  # Output: "HelloWorld123"
+```
+
+### expand_contractions
+
+```python
+def expand_contractions(s: str) -> str:
+    """Expand common English contractions (e.g., "don't" to "do not")."""
+```
+
+**Parameters:**
+- `s` (str): The input string with contractions
+
+**Returns:**
+- str: String with contractions expanded
+
+**Example:**
+```python
+from funstrings import expand_contractions
+
+text = "I don't know what I'm doing"
+expanded = expand_contractions(text)
+print(expanded)  # Output: "I do not know what I am doing"
+```
+
+### correct_whitespace
+
+```python
+def correct_whitespace(s: str) -> str:
+    """Remove excessive whitespace, normalize tabs and newlines."""
+```
+
+**Parameters:**
+- `s` (str): The input string with potentially messy whitespace
+
+**Returns:**
+- str: String with normalized whitespace
+
+**Example:**
+```python
+from funstrings import correct_whitespace
+
+text = "Hello   World\t\n  !"
+corrected = correct_whitespace(text)
+print(corrected)  # Output: "Hello World !"
+```
+
+## Text Analysis Helpers
+
+### unique_words
+
+```python
+def unique_words(s: str) -> List[str]:
+    """Return a list of unique words in the input string."""
+```
+
+**Parameters:**
+- `s` (str): The input string to analyze
+
+**Returns:**
+- List[str]: List of unique words (case-insensitive)
+
+**Example:**
+```python
+from funstrings import unique_words
+
+text = "hello world hello python"
+unique = unique_words(text)
+print(unique)  # Output: ['hello', 'world', 'python']
+```
+
+### most_common_word
+
+```python
+def most_common_word(s: str) -> str:
+    """Return the most frequently occurring word in the input string."""
+```
+
+**Parameters:**
+- `s` (str): The input string to analyze
+
+**Returns:**
+- str: The most common word, or empty string if input is empty
+
+**Example:**
+```python
+from funstrings import most_common_word
+
+text = "hello world hello python world hello"
+common = most_common_word(text)
+print(common)  # Output: "hello"
+```
+
+### sentence_count
+
+```python
+def sentence_count(s: str) -> int:
+    """Count the number of sentences in the input string."""
+```
+
+**Parameters:**
+- `s` (str): The input string to analyze
+
+**Returns:**
+- int: Number of sentences detected
+
+**Example:**
+```python
+from funstrings import sentence_count
+
+text = "Hello world! How are you? I'm fine."
+count = sentence_count(text)
+print(count)  # Output: 3
+```
+
+### average_sentence_length
+
+```python
+def average_sentence_length(s: str) -> float:
+    """Calculate the average number of words per sentence."""
+```
+
+**Parameters:**
+- `s` (str): The input string to analyze
+
+**Returns:**
+- float: Average words per sentence, or 0.0 if no sentences
+
+**Example:**
+```python
+from funstrings import average_sentence_length
+
+text = "Hello world! This is a test."
+avg = average_sentence_length(text)
+print(avg)  # Output: 3.0
+```
+
+### character_ratio
+
+```python
+def character_ratio(s: str) -> Dict[str, float]:
+    """Calculate the ratio of uppercase, lowercase, and numeric characters."""
+```
+
+**Parameters:**
+- `s` (str): The input string to analyze
+
+**Returns:**
+- Dict[str, float]: Dictionary with ratios for 'uppercase', 'lowercase', and 'numeric'
+
+**Example:**
+```python
+from funstrings import character_ratio
+
+text = "Hello123"
+ratio = character_ratio(text)
+print(ratio)  # Output: {'uppercase': 0.125, 'lowercase': 0.5, 'numeric': 0.375}
+```
+
+## ML/NLP Preprocessing
+
+### generate_ngrams
+
+```python
+def generate_ngrams(s: str, n: int = 2) -> List[str]:
+    """Generate n-grams from the input string."""
+```
+
+**Parameters:**
+- `s` (str): The input string
+- `n` (int, optional): Size of n-grams to generate (default: 2)
+
+**Returns:**
+- List[str]: List of n-grams
+
+**Example:**
+```python
+from funstrings import generate_ngrams
+
+text = "hello"
+bigrams = generate_ngrams(text, 2)
+print(bigrams)  # Output: ['he', 'el', 'll', 'lo']
+```
+
+### strip_accents
+
+```python
+def strip_accents(s: str) -> str:
+    """Remove accents from characters (e.g., 'café' -> 'cafe')."""
+```
+
+**Parameters:**
+- `s` (str): The input string with accented characters
+
+**Returns:**
+- str: String with accents removed
+
+**Example:**
+```python
+from funstrings import strip_accents
+
+text = "café résumé"
+cleaned = strip_accents(text)
+print(cleaned)  # Output: "cafe resume"
+```
+
+### lemmatize_text
+
+```python
+def lemmatize_text(s: str) -> str:
+    """Reduce words to their base form (lemma)."""
+```
+
+**Parameters:**
+- `s` (str): The input string
+
+**Returns:**
+- str: String with words reduced to their base forms
+
+**Example:**
+```python
+from funstrings import lemmatize_text
+
+text = "running cats and dogs"
+lemmatized = lemmatize_text(text)
+print(lemmatized)  # Output: "run cat and dog"
+```
+
+### is_ascii
+
+```python
+def is_ascii(s: str) -> bool:
+    """Check if the string contains only ASCII characters."""
+```
+
+**Parameters:**
+- `s` (str): The input string to check
+
+**Returns:**
+- bool: True if all characters are ASCII, False otherwise
+
+**Example:**
+```python
+from funstrings import is_ascii
+
+print(is_ascii("Hello World"))  # Output: True
+print(is_ascii("café"))  # Output: False
+```
+
+## Validation Functions
+
+### is_valid_email
+
+```python
+def is_valid_email(s: str) -> bool:
+    """Validate if a string is a properly formatted email address."""
+```
+
+**Parameters:**
+- `s` (str): The input string to validate
+
+**Returns:**
+- bool: True if the string is a valid email address, False otherwise
+
+**Example:**
+```python
+from funstrings import is_valid_email
+
+print(is_valid_email("user@example.com"))  # Output: True
+print(is_valid_email("invalid-email"))  # Output: False
+```
+
+### is_valid_url
+
+```python
+def is_valid_url(s: str) -> bool:
+    """Validate if a string is a properly formatted URL."""
+```
+
+**Parameters:**
+- `s` (str): The input string to validate
+
+**Returns:**
+- bool: True if the string is a valid URL, False otherwise
+
+**Example:**
+```python
+from funstrings import is_valid_url
+
+print(is_valid_url("https://example.com"))  # Output: True
+print(is_valid_url("not-a-url"))  # Output: False
+```
+
+### is_valid_ip
+
+```python
+def is_valid_ip(s: str) -> bool:
+    """Check if a string is a valid IP address (IPv4 or IPv6)."""
+```
+
+**Parameters:**
+- `s` (str): The input string to validate
+
+**Returns:**
+- bool: True if the string is a valid IP address, False otherwise
+
+**Example:**
+```python
+from funstrings import is_valid_ip
+
+print(is_valid_ip("192.168.1.1"))  # Output: True
+print(is_valid_ip("2001:0db8:85a3:0000:0000:8a2e:0370:7334"))  # Output: True
+print(is_valid_ip("not-an-ip"))  # Output: False
+```
+
+### is_valid_date
+
+```python
+def is_valid_date(s: str, format: str = '%Y-%m-%d') -> bool:
+    """Check if a string matches a date format."""
+```
+
+**Parameters:**
+- `s` (str): The input string to validate
+- `format` (str, optional): The expected date format (default: '%Y-%m-%d')
+
+**Returns:**
+- bool: True if the string is a valid date in the specified format, False otherwise
+
+**Example:**
+```python
+from funstrings import is_valid_date
+
+print(is_valid_date("2023-01-15"))  # Output: True
+print(is_valid_date("01/15/2023", format="%m/%d/%Y"))  # Output: True
+print(is_valid_date("not-a-date"))  # Output: False
+```
+
+### contains_special_characters
+
+```python
+def contains_special_characters(s: str) -> bool:
+    """Check if the string contains special characters."""
+```
+
+**Parameters:**
+- `s` (str): The input string to check
+
+**Returns:**
+- bool: True if the string contains special characters, False otherwise
+
+**Example:**
+```python
+from funstrings import contains_special_characters
+
+print(contains_special_characters("Hello!"))  # Output: True
+print(contains_special_characters("HelloWorld123"))  # Output: False
 ```
 
 ## For Students and Beginners

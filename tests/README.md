@@ -24,7 +24,9 @@ pytest --cov=stringfun
 
 ## Test Files
 
-- `test_operations.py`: Tests for the string operation functions
+- `test_operations.py`: Tests for the basic string operation functions
+- `test_new_operations.py`: Tests for the text analysis, transformation, and pattern-based functions
+- `test_new_functions.py`: Tests for the data cleaning, text analysis helpers, ML/NLP preprocessing, and validation functions
 
 ## For Students and Beginners
 
@@ -55,13 +57,13 @@ Example:
 ```python
 def test_reverse_string():
     from stringfun import reverse_string
-    
+
     # Test normal case
     assert reverse_string("hello") == "olleh"
-    
+
     # Test empty string
     assert reverse_string("") == ""
-    
+
     # Test with spaces
     assert reverse_string("hello world") == "dlrow olleh"
 ```

@@ -37,7 +37,7 @@ setup(
     name="funstrings",
 
     # Version number - follow semantic versioning (MAJOR.MINOR.PATCH)
-    version="0.1.0",
+    version="0.1.2",
 
     #############################################
     # PACKAGE DESCRIPTION
@@ -63,7 +63,7 @@ setup(
     url="https://github.com/nilkanth02/funstrings",
 
     # Direct download URL for a specific version (optional)
-    # download_url="https://github.com/nilkanth02/funstrings/archive/v0.1.0.tar.gz",
+    download_url="https://github.com/nilkanth02/funstrings/archive/v0.1.2.tar.gz",
 
     # Author information
     author="Nilkanth Ahire",
@@ -201,7 +201,8 @@ setup(
         "Bug Tracker": "https://github.com/nilkanth02/funstrings/issues",
         "Documentation": "https://github.com/nilkanth02/funstrings",
         "Source Code": "https://github.com/nilkanth02/funstrings",
-        "Examples": "https://github.com/nilkanth02/funstrings/tree/main/examples",  # Add examples directory
-        "Educational Resources": "https://github.com/nilkanth02/funstrings/tree/main/tutorials",  # Add tutorials
+        "Examples": "https://github.com/nilkanth02/funstrings/tree/main/examples",
+        "Educational Resources": "https://github.com/nilkanth02/funstrings/tree/main/tutorials",
+        "Changelog": "https://github.com/nilkanth02/funstrings/blob/main/CHANGELOG.md",
     },
 )
